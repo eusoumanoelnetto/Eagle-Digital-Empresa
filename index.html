@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fante Agency - Criamos, Desenvolvemos, Transformamos</title>
+  <link rel="icon" href="https://www.agenciafante.com.br/assets/favicons/favicon.ico" type="image/x-icon" />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fanteOrange: '#F98E2B',
+            fanteDark: '#1a1a1a',
+            fanteGray: '#f8f8f8',
+          },
+          animation: {
+            'text-reveal': 'text-reveal 1s forwards',
+            'icon-glow-pulse': 'icon-glow-pulse 1.5s infinite ease-in-out',
+          },
+          keyframes: {
+            'text-reveal': {
+              '0%': { transform: 'translateY(100%)', opacity: '0' },
+              '100%': { transform: 'translateY(0%)', opacity: '1' },
+            },
+            'icon-glow-pulse': {
+              '0%, 100%': { transform: 'scale(1)', filter: 'drop-shadow(0 0px 0px rgba(249, 142, 43, 0))' },
+              '50%': { transform: 'scale(1.05)', filter: 'drop-shadow(0 0px 8px rgba(249, 142, 43, 0.7))' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+</head>
+<body class="font-sans antialiased bg-white text-fanteDark">
+  <div id="root"></div>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
